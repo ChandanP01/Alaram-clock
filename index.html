@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Alarm Clock</title>
+</head>
+<body>
+    <div class="container">
+        <div class="clock-wrapper">
+            <!-- <div class="clock"> -->
+                <div class="hour c">12</div>
+                <div class="min c">34</div>
+                <div class="sec c">24</div>
+                <div class="am-pm c">AM</div>
+            <!-- </div> -->
+        </div>
+        
+            <div class="alarms">
+                
+            </div>
+            <div id="add-alarm-btn">
+                <span>+</span>
+            </div>
+        </div>
+        </div>
+        <div class="modal" id ="add-alarm-modal">
+            <div class="content">
+                <div class="head">
+                    <div class="title">Add Alarm</div>
+                    <div class="close">x</div>
+                </div>
+                <div class="body">
+                    <div class="name">
+                        <input type="text" id="name" value="Alarm"/>
+                    </div>
+                    <form>
+                        <div class="time">
+                            <input type="number" id="input_hour" value ="12" min ="0" max = "12" oninput="validity.valid||(value='0');" required/>
+                            <input type="number" id="input_min" value ="00" min ="0" max = "60" oninput="validity.valid||(value='0');"required/>
+                            <select name="zone" id ="Zone" required>
+                                <option value="AM" selected>AM</option>
+                                <option value="PM">PM</option>
+                          </select>
+                        </div>
+                    </form>
+                    <div class="days">
+                        <div class="day active">M</div>
+                        <div class="day active">T</div>
+                        <div class="day active">W</div>
+                        <div class="day ">T</div>
+                        <div class="day ">F</div>
+                        <div class="day ">S</div>
+                        <div class="day ">S</div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="btn cancel">Cancel</div>
+                    <div class="btn save">Save</div>
+                </div>
+            </div>
+        </div>
+        <div class="second_modal" id = "show_message">
+            <div class="content">
+                <div class="head">
+                    <div class="title">Alert</div>
+                    <div class="close2">x</div>
+                </div>
+                <div class="para">
+                </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
